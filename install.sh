@@ -30,6 +30,31 @@ for skill_dir in "$SOURCE_SKILLS_DIR"/*; do
   echo "  + $skill_name"
 done
 
+# --- Droids ---
+echo "Installing droids..."
+TARGET_DROIDS_DIR="$HOME/.factory/droids"
+mkdir -p "$TARGET_DROIDS_DIR"
+
+if [ -d "$MOTTO_SKILLS_HOME/droids" ]; then
+  for dfile in "$MOTTO_SKILLS_HOME/droids"/*; do
+    [ -f "$dfile" ] || continue
+    cp -a "$dfile" "$TARGET_DROIDS_DIR/"
+    echo "  + droids/$(basename "$dfile")"
+  done
+fi
+
+# --- Personal AGENTS.md ---
+echo "Installing personal AGENTS.md..."
+TARGET_AGENTS_FILE="$HOME/.factory/AGENTS.md"
+if [ -f "$MOTTO_SKILLS_HOME/agent/AGENTS.md" ]; then
+  if [ ! -f "$TARGET_AGENTS_FILE" ]; then
+    cp "$MOTTO_SKILLS_HOME/agent/AGENTS.md" "$TARGET_AGENTS_FILE"
+    echo "  + AGENTS.md (fresh)"
+  else
+    echo "  ~ AGENTS.md (already exists, skipped — use install.ps1 -Force on Windows to overwrite)"
+  fi
+fi
+
 # --- Knowledge Store ---
 echo "Installing knowledge store..."
 mkdir -p "$TARGET_KNOWLEDGE_DIR"

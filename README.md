@@ -12,6 +12,19 @@ bash install.sh
 
 Done — skills are installed into `~/.factory/skills/`.
 
+## What gets installed
+
+| Repo path     | Target                        | Update policy                          |
+| ------------- | ----------------------------- | -------------------------------------- |
+| `skills/`     | `~/.factory/skills/`          | Overwritten on every install           |
+| `droids/`     | `~/.factory/droids/`          | Overwritten on every install           |
+| `agent/AGENTS.md` | `~/.factory/AGENTS.md`    | Fresh only; `-Force` to overwrite      |
+| `knowledge/`  | `~/.factory/knowledge/`       | Fresh only; `-Force` to overwrite      |
+| `policy/`     | `~/.factory/skill-broker.policy.json`, `~/.factory/hooks.json` | Fresh only; `-Force` to overwrite |
+
+Re-running `install.ps1`/`install.sh` after pulling the repo is the way to
+propagate skill and droid updates to a machine.
+
 ## Fast Agent Standup
 
 Bring a brand-new machine or agent fully online in one step. `standup.sh`

@@ -1,0 +1,14 @@
+﻿class Folder:
+	def GetName(self) -> str:
+	def GetSubFolderList(self) -> list[Folder]:
+	def GetClipList(self) -> list[MediaPoolItem]:
+	def GetIsFolderStale(self) -> bool:
+	def GetUniqueId(self) -> str:
+	def Export(self, filePath: str) -> bool:
+	def TranscribeAudio(self, useSpeakerDetection: bool | None = None, transcribeAsNestedClip = False) -> bool:
+	def ClearTranscription(self) -> bool:
+	def PerformAudioClassification(self) -> bool:
+	def ClearAudioClassification(self) -> bool:
+	def RemoveMotionBlur(self, deblurOption: DeblurOptions | None = None) -> list[list[MediaPoolItem]]:
+	def AnalyzeForIntellisearch(self, identifyFaces: bool, isBetterMode: bool) -> bool:
+	def AnalyzeForSlate(self, markerColor: SlateMarkerColor) -> bool:

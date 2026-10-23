@@ -1,0 +1,28 @@
+﻿class ProjectManager:
+	def LoadProject(self, projectName: str) -> Project | None:
+	def CreateProject(self, projectName: str, mediaLocationPath: str | None = None) -> Project | None:
+	def DeleteProject(self, projectName: str) -> bool:
+	def SaveProject(self) -> bool:
+	def GetCurrentProject(self) -> Project:
+	def CreateFolder(self, folderName: str) -> bool:
+	def GetProjectListInCurrentFolder(self) -> list[str]:
+	def GetFolderListInCurrentFolder(self) -> list[str]:
+	def GotoRootFolder(self) -> bool:
+	def GotoParentFolder(self) -> bool:
+	def OpenFolder(self, folderName: str) -> bool:
+	def ImportProject(self, filePath: str, projectName: str | None = None) -> bool:
+	def ExportProject(self, projectName: str, filePath: str, withStillsAndLUTs = True) -> bool:
+	def ArchiveProject(self, projectName: str, filePath: str, isArchiveSrcMedia = True, isArchiveRenderCache = True, isArchiveProxyMedia = False) -> bool:
+	def RestoreProject(self, filePath: str, projectName: str | None = None) -> bool:
+	def GetProjectLastModifiedTime(self, projectName: str) -> int:
+	def GetProjectAttributesInCurrentFolder(self) -> dict[str, ProjectAttributes]:
+	def CloseProject(self, project: Project) -> bool:
+	def GetCurrentFolder(self) -> str:
+	def DeleteFolder(self, folderName: str) -> bool:
+	def GetCurrentDatabase(self) -> DatabaseInfo:
+	def GetDatabaseList(self) -> list[DatabaseInfo]:
+	def SetCurrentDatabase(self, dbInfo: DatabaseInfo) -> bool:
+	def LoadCloudProject(self, cloudSettings: CloudSettings) -> Project | None:
+	def CreateCloudProject(self, cloudSettings: CloudSettings) -> Project | None:
+	def ImportCloudProject(self, filePath: str, cloudSettings: CloudSettings) -> bool:
+	def RestoreCloudProject(self, folderPath: str, cloudSettings: CloudSettings) -> bool:

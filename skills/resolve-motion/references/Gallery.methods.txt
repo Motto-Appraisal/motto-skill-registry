@@ -1,0 +1,9 @@
+﻿class Gallery:
+	def GetAlbumName(self, galleryStillAlbum: GalleryStillAlbum) -> str:
+	def SetAlbumName(self, galleryStillAlbum: GalleryStillAlbum, albumName: str) -> bool:
+	def GetCurrentStillAlbum(self) -> GalleryStillAlbum:
+	def SetCurrentStillAlbum(self, galleryStillAlbum: GalleryStillAlbum) -> bool:
+	def CreateGalleryStillAlbum(self) -> GalleryStillAlbum:
+	def CreateGalleryPowerGradeAlbum(self) -> GalleryStillAlbum:
+	def GetGalleryStillAlbums(self) -> list[GalleryStillAlbum]:
+	def GetGalleryPowerGradeAlbums(self) -> list[GalleryStillAlbum]:
