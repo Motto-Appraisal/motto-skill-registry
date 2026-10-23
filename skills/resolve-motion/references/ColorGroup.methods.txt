@@ -1,0 +1,6 @@
+﻿class ColorGroup:
+	def GetName(self) -> str:
+	def SetName(self, groupName: str) -> bool:
+	def GetClipsInTimeline(self, timeline: Timeline | None = None) -> list[TimelineItem]:
+	def GetPreClipNodeGraph(self) -> Graph:
+	def GetPostClipNodeGraph(self) -> Graph:

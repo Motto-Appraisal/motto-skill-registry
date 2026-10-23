@@ -1,0 +1,29 @@
+﻿class MediaPool:
+	def AddSubFolder(self, folder: Folder, name: str) -> Folder:
+	def GetCurrentFolder(self) -> Folder:
+	def RefreshFolders(self) -> bool:
+	def SetCurrentFolder(self, folder: Folder) -> bool:
+	def GetRootFolder(self) -> Folder:
+	def CreateTimelineFromClips(self, name: str, clipInfos: list[CreateTimelineClipInfo]) -> Timeline:
+	def AppendToTimeline(self, clipInfos: list[AppendClipInfo]) -> list[TimelineItem]:
+	def CreateEmptyTimeline(self, name: str) -> Timeline:
+	def ImportTimelineFromFile(self, filePath: str, importOptions: ImportOptions | None = None) -> Timeline:
+	def DeleteTimelines(self, timelines: list[Timeline]) -> bool:
+	def ExportMetadata(self, fileName: str, clips: list[MediaPoolItem] | None = None) -> bool:
+	def DeleteClips(self, clips: list[MediaPoolItem]) -> bool:
+	def ImportFolderFromFile(self, filePath: str, sourceClipsPath: str | None = None) -> bool:
+	def DeleteFolders(self, subfolders: list[Folder]) -> bool:
+	def MoveClips(self, clips: list[MediaPoolItem], targetFolder: Folder) -> bool:
+	def MoveFolders(self, folders: list[Folder], targetFolder: Folder) -> bool:
+	def GetClipMatteList(self, mediaPoolItem: MediaPoolItem) -> list[str]:
+	def GetTimelineMatteList(self, folder: Folder) -> list[MediaPoolItem]:
+	def DeleteClipMattes(self, mediaPoolItem: MediaPoolItem, paths: list[str]) -> bool:
+	def RelinkClips(self, clips: list[MediaPoolItem], folderPath: str) -> bool:
+	def UnlinkClips(self, clips: list[MediaPoolItem]) -> bool:
+	def ImportMedia(self, clipInfos: list[ImportClipInfo]) -> list[MediaPoolItem]:
+	def GetUniqueId(self) -> str:
+	def CreateStereoClip(self, leftMediaPoolItem: MediaPoolItem, rightMediaPoolItem: MediaPoolItem) -> MediaPoolItem:
+	def CreateMulticamClip(self, clips: list[MediaPoolItem], multicamOptions: MulticamOptions) -> list[MediaPoolItem]:
+	def AutoSyncAudio(self, mediaPoolItems: list[MediaPoolItem], audioSyncSettings: AudioSyncSettings) -> bool:
+	def GetSelectedClips(self) -> list[MediaPoolItem]:
+	def SetSelectedClip(self, mediaPoolItem: MediaPoolItem) -> bool:

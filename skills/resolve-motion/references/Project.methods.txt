@@ -1,0 +1,55 @@
+﻿class Project:
+	def GetMediaPool(self) -> MediaPool:
+	def GetCurrentTimeline(self) -> Timeline:
+	def SetCurrentTimeline(self, timeline: Timeline) -> bool:
+	def GetTimelineCount(self) -> int:
+	def GetTimelineByIndex(self, idx: int) -> Timeline | None:
+	def GetGallery(self) -> Gallery:
+	def GetName(self) -> str:
+	def SetName(self, projectName: str) -> bool:
+	def GetProjectSettingsPresetList(self) -> list[ProjectSettingsPresetInfo]:
+	def SetProjectSettingsPreset(self, presetName: str) -> bool:
+	def DeleteProjectSettingsPreset(self, presetName: str) -> bool:
+	def SaveCurrentProjectSettingsAsNewPreset(self, presetName: str) -> bool:
+	def UpdateProjectSettingsPreset(self, presetName: str) -> bool:
+	def ExportProjectSettingsPreset(self, presetName: str, exportPath: str) -> bool:
+	def ImportProjectSettingsPreset(self, presetFilePath: str, presetName: str | None = None) -> bool:
+	def GetRenderJobList(self) -> list[RenderJobInfo]:
+	def GetRenderPresetList(self) -> list[str]:
+	def LoadRenderPreset(self, presetName: str) -> bool:
+	def SaveAsNewRenderPreset(self, presetName: str) -> bool:
+	def DeleteRenderPreset(self, presetName: str) -> bool:
+	def UpdateRenderPreset(self, presetName: str) -> bool:
+	def SetQuickExportEnabledForRenderPreset(self, presetName: str, isEnabled: bool) -> bool:
+	def StartRendering(self, jobIds: list[str], isInteractiveMode = False) -> bool:
+	def StopRendering(self):
+	def IsRenderingInProgress(self) -> bool:
+	def AddRenderJob(self) -> str:
+	def DeleteRenderJob(self, jobId: str) -> bool:
+	def DeleteAllRenderJobs(self) -> bool:
+	def SetRenderSettings(self, settings: RenderSettings) -> bool:
+	def GetRenderResolutions(self, format: str | None = None, codec: str | None = None) -> list[ResolutionInfo]:
+	def GetSettings(self) -> ProjectSettings:
+	def SetSettings(self, settings: ProjectSettings) -> bool:
+	def GetRenderJobStatus(self, jobId: str) -> RenderJobStatus:
+	def GetQuickExportRenderPresets(self) -> list[str]:
+	def RenderWithQuickExport(self, quickExportPresetName: str, presetInfo: QuickExportRenderSettings) -> QuickExportRenderStatus:
+	def GetRenderFormats(self) -> dict:
+	def GetAudioRenderFormats(self) -> dict:
+	def GetRenderCodecs(self, renderFormatFileExtension: str) -> dict:
+	def GetAudioRenderCodecs(self, audioRenderFormatFileExtension: str) -> dict:
+	def GetCurrentRenderFormatAndCodec(self) -> dict[str, str]:
+	def SetCurrentRenderFormatAndCodec(self, format: str, codec: str) -> bool:
+	def GetCurrentRenderMode(self) -> int:
+	def SetCurrentRenderMode(self, renderMode: int) -> bool:
+	def RefreshLUTList(self) -> bool:
+	def GetUniqueId(self) -> str:
+	def InsertAudioToCurrentTrackAtPlayhead(self, mediaPath: str, startOffsetInSamples: int, durationInSamples: int) -> bool:
+	def LoadBurnInPreset(self, presetName: str) -> bool:
+	def ExportCurrentFrameAsStill(self, filePath: str) -> bool:
+	def GetColorGroupsList(self) -> list[ColorGroup]:
+	def AddColorGroup(self, groupName: str) -> ColorGroup:
+	def DeleteColorGroup(self, colorGroup: ColorGroup) -> bool:
+	def ApplyFairlightPresetToCurrentTimeline(self, presetName: str) -> bool:
+	def ResetIntellisearchAnalysis(self) -> bool:
+	def GenerateSpeech(self, speechSettings: SpeechSettings) -> MediaPoolItem:

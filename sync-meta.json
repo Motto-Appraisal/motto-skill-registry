@@ -1,0 +1,174 @@
+{
+  "skills/agents-sdk": {
+    "ts": "2026-08-23T02:32:25.2688178Z",
+    "device": "legion"
+  },
+  "skills/appraisal-review-check": {
+    "ts": "2026-09-19T19:33:21.1572687Z",
+    "device": "legion"
+  },
+  "skills/blender-3d": {
+    "ts": "2026-09-14T22:40:37.9246875Z",
+    "device": "legion"
+  },
+  "skills/cloudflare": {
+    "ts": "2026-08-23T02:32:25.4283499Z",
+    "device": "legion"
+  },
+  "skills/cloudflare-email-service": {
+    "ts": "2026-08-23T02:32:25.2719188Z",
+    "device": "legion"
+  },
+  "skills/cloudflare-one": {
+    "ts": "2026-08-23T02:32:25.2744533Z",
+    "device": "legion"
+  },
+  "skills/cloudflare-one-migrations": {
+    "ts": "2026-08-23T02:32:25.2729227Z",
+    "device": "legion"
+  },
+  "skills/davinci-resolve-api-reference": {
+    "ts": "2026-09-14T20:46:00.7287233Z",
+    "device": "legion"
+  },
+  "skills/davinci-resolve-audio-cleanup-podcast": {
+    "ts": "2026-09-14T20:45:48.285953Z",
+    "device": "legion"
+  },
+  "skills/davinci-resolve-color-grade-webcam": {
+    "ts": "2026-09-14T20:45:48.2869538Z",
+    "device": "legion"
+  },
+  "skills/davinci-resolve-computer-use-training": {
+    "ts": "2026-09-14T20:45:48.2985554Z",
+    "device": "legion"
+  },
+  "skills/davinci-resolve-cut-screen-recording": {
+    "ts": "2026-09-14T20:45:48.3005678Z",
+    "device": "legion"
+  },
+  "skills/davinci-resolve-devrel-project-template": {
+    "ts": "2026-09-14T20:45:48.3015646Z",
+    "device": "legion"
+  },
+  "skills/davinci-resolve-export-multi-platform": {
+    "ts": "2026-09-14T20:45:48.3045899Z",
+    "device": "legion"
+  },
+  "skills/davinci-resolve-setup": {
+    "ts": "2026-09-14T20:45:48.3061948Z",
+    "device": "legion"
+  },
+  "skills/davinci-resolve-social-editor": {
+    "ts": "2026-09-14T20:45:48.3144581Z",
+    "device": "legion"
+  },
+  "skills/davinci-resolve-titles-and-lower-thirds": {
+    "ts": "2026-09-14T20:45:48.3144581Z",
+    "device": "legion"
+  },
+  "skills/davinci-resolve-troubleshooting": {
+    "ts": "2026-09-14T20:45:48.3156225Z",
+    "device": "legion"
+  },
+  "skills/durable-objects": {
+    "ts": "2026-08-23T02:32:25.4303576Z",
+    "device": "legion"
+  },
+  "skills/live-browser-observation": {
+    "ts": "2026-10-22T18:54:58.6020094Z",
+    "device": "legion"
+  },
+  "skills/matrix-comp-search": {
+    "ts": "2026-10-22T16:13:48.0161339Z",
+    "device": "legion"
+  },
+  "skills/resolve-motion": {
+    "ts": "2026-09-14T22:15:31.1941159Z",
+    "device": "legion"
+  },
+  "skills/sandbox-migrate-to-next": {
+    "ts": "2026-08-23T02:32:25.4313554Z",
+    "device": "legion"
+  },
+  "skills/sandbox-next": {
+    "ts": "2026-08-23T02:32:25.4326219Z",
+    "device": "legion"
+  },
+  "skills/sandbox-stable": {
+    "ts": "2026-08-23T02:32:25.4336678Z",
+    "device": "legion"
+  },
+  "skills/social-video-folder-autocutter": {
+    "ts": "2026-09-14T20:45:48.3188388Z",
+    "device": "legion"
+  },
+  "skills/titan-appraisal-prep": {
+    "ts": "2026-10-22T16:13:47.7869695Z",
+    "device": "legion"
+  },
+  "skills/truetracts": {
+    "ts": "2026-10-22T16:15:55.6433332Z",
+    "device": "legion"
+  },
+  "skills/truetracts-appraisal-templates": {
+    "ts": "2026-09-19T20:13:33.1204447Z",
+    "device": "legion"
+  },
+  "skills/turnstile-spin": {
+    "ts": "2026-08-23T02:32:25.4396755Z",
+    "device": "legion"
+  },
+  "skills/web-perf": {
+    "ts": "2026-08-23T02:32:25.4406769Z",
+    "device": "legion"
+  },
+  "skills/workers-best-practices": {
+    "ts": "2026-08-23T02:32:25.442183Z",
+    "device": "legion"
+  },
+  "skills/wrangler": {
+    "ts": "2026-08-23T02:32:25.4431907Z",
+    "device": "legion"
+  },
+  "droids/issue-handler.md": {
+    "ts": "2026-07-18T04:51:31.5490831Z",
+    "device": "legion"
+  },
+  "droids/legion-system-administrator.md": {
+    "ts": "2026-07-10T19:29:36.9396347Z",
+    "device": "legion"
+  },
+  "droids/longevity-research-fetcher.md": {
+    "ts": "2026-07-01T21:59:12.9226379Z",
+    "device": "legion"
+  },
+  "droids/mandated-worker.md": {
+    "ts": "2026-07-14T03:43:35.610478Z",
+    "device": "legion"
+  },
+  "droids/mission-orchestrator.md": {
+    "ts": "2026-06-29T05:26:40.3008856Z",
+    "device": "legion"
+  },
+  "droids/protocol-reviewer.md": {
+    "ts": "2026-07-01T21:48:37.2006653Z",
+    "device": "legion"
+  },
+  "droids/scrutiny-feature-reviewer.md": {
+    "ts": "2026-09-16T13:28:01.5042046Z",
+    "device": "legion"
+  },
+  "droids/user-testing-flow-validator.md": {
+    "ts": "2026-09-16T13:28:01.5042046Z",
+    "device": "legion"
+  },
+  "droids/weekly-digest-builder.md": {
+    "ts": "2026-07-01T22:40:49.0087656Z",
+    "device": "legion"
+  },
+  "AGENTS.md": {
+    "ts": "2026-10-16T01:56:22.4479487Z",
+    "device": "legion"
+  }
+}

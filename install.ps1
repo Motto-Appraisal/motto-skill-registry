@@ -24,8 +24,33 @@ New-Item -ItemType Directory -Force -Path $TARGET_SKILLS_DIR | Out-Null
 Get-ChildItem -Path $SOURCE_SKILLS_DIR -Directory | ForEach-Object {
   $skillName = $_.Name
   $destDir = "$TARGET_SKILLS_DIR\$skillName"
+  if (Test-Path $destDir) { Remove-Item -Recurse -Force $destDir }
   Copy-Item -Recurse -Force "$($_.FullName)" "$destDir"
   Write-Host "  + $skillName"
+}
+
+# --- Droids ---
+Write-Host "Installing droids..."
+$TARGET_DROIDS_DIR = "$env:USERPROFILE\.factory\droids"
+New-Item -ItemType Directory -Force -Path $TARGET_DROIDS_DIR | Out-Null
+
+if (Test-Path "$MOTTO_SKILLS_HOME\droids") {
+  Get-ChildItem -Path "$MOTTO_SKILLS_HOME\droids" -File | ForEach-Object {
+    Copy-Item -Force $_.FullName "$TARGET_DROIDS_DIR\$($_.Name)"
+    Write-Host "  + droids/$($_.Name)"
+  }
+}
+
+# --- Personal AGENTS.md ---
+Write-Host "Installing personal AGENTS.md..."
+$TARGET_AGENTS_FILE = "$env:USERPROFILE\.factory\AGENTS.md"
+if (Test-Path "$MOTTO_SKILLS_HOME\agent\AGENTS.md") {
+  if (-not (Test-Path $TARGET_AGENTS_FILE) -or $Force) {
+    Copy-Item -Force "$MOTTO_SKILLS_HOME\agent\AGENTS.md" $TARGET_AGENTS_FILE
+    Write-Host "  + AGENTS.md (fresh)"
+  } else {
+    Write-Host "  ~ AGENTS.md (already exists, skipped - use -Force to overwrite)"
+  }
 }
 
 # --- Knowledge Store ---

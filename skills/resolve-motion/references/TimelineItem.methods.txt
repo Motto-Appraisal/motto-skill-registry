@@ -1,0 +1,94 @@
+﻿class TimelineItem:
+	def GetType(self) -> str:
+	def AddTransition(self, transitionOptions: TransitionOptions) -> TimelineItem | None:
+	def GetName(self) -> str:
+	def SetName(self, name: str) -> bool:
+	def GetStart(self, subframePrecision = False) -> float:
+	def GetEnd(self, subframePrecision = False) -> float:
+	def GetSourceStartFrame(self) -> int:
+	def GetSourceEndFrame(self) -> int:
+	def GetSourceStartTime(self) -> float:
+	def GetSourceEndTime(self) -> float:
+	def GetDuration(self, subframePrecision = False) -> float:
+	def GetLeftOffset(self, subframePrecision = False) -> float:
+	def GetRightOffset(self, subframePrecision = False) -> float:
+	def GetFusionCompCount(self) -> int:
+	def GetFusionCompNameList(self) -> list[str]:
+	def GetFusionCompByIndex(self, compIndex: int) -> FusionComp | None:
+	def GetFusionCompByName(self, compName: str) -> FusionComp | None:
+	def AddFusionComp(self) -> FusionComp:
+	def GetMediaPoolItem(self) -> MediaPoolItem | None:
+	def AddMarker(self, frameId: int, color: MarkerColor, name: str, note: str, duration: int, customData: str | None = None) -> bool:
+	def DeleteMarkersByColor(self, color: MarkerColor | Literal['All']) -> bool:
+	def DeleteMarkerAtFrame(self, frameNum: int) -> bool:
+	def DeleteMarkerByCustomData(self, customData: str) -> bool:
+	def GetMarkers(self) -> dict[int, MarkerInfo]:
+	def GetMarkerByCustomData(self, customData: str) -> MarkerInfo:
+	def UpdateMarkerCustomData(self, frameId: int, customData: str) -> bool:
+	def GetMarkerCustomData(self, frameId: int) -> str:
+	def SetProperties(self, properties: TimelineItemProperties) -> bool:
+	def GetProperties(self) -> TimelineItemProperties:
+	def SetSpeed(self, speedOptions: SpeedOptions) -> bool:
+	def GetSpeed(self) -> SpeedOptions:
+	def AddFlag(self, color: FlagColor) -> bool:
+	def GetFlagList(self) -> list[str]:
+	def ClearFlags(self, color: FlagColor | Literal['All']) -> bool:
+	def GetStereoConvergenceValues(self) -> dict[int, float]:
+	def GetStereoLeftFloatingWindowParams(self) -> dict[int, FloatingWindowParams]:
+	def GetStereoRightFloatingWindowParams(self) -> dict[int, FloatingWindowParams]:
+	def GetClipColor(self) -> ClipColor | Literal['']:
+	def SetClipColor(self, colorName: ClipColor) -> bool:
+	def ClearClipColor(self) -> bool:
+	def ImportFusionComp(self, path: str) -> FusionComp:
+	def ExportFusionComp(self, path: str, compIndex: int) -> bool:
+	def DeleteFusionCompByName(self, compName: str) -> bool:
+	def LoadFusionCompByName(self, compName: str) -> FusionComp:
+	def RenameFusionCompByName(self, oldName: str, newName: str) -> bool:
+	def RenameVersionByName(self, oldName: str, newName: str, versionType: int) -> bool:
+	def DeleteVersionByName(self, versionName: str, versionType: int) -> bool:
+	def LoadVersionByName(self, versionName: str, versionType: int) -> bool:
+	def AddVersion(self, versionName: str, versionType: int) -> bool:
+	def GetVersionNameList(self, versionType: int) -> list[str]:
+	def SetCDL(self, CDL: CDL) -> bool:
+	def AddTake(self, mediaPoolItem: MediaPoolItem, startFrame: int | None = None, endFrame: int | None = None) -> bool:
+	def GetSelectedTakeIndex(self) -> int:
+	def GetTakesCount(self) -> int:
+	def GetTakeByIndex(self, idx: int) -> TakeInfo | None:
+	def DeleteTakeByIndex(self, idx: int) -> bool:
+	def SelectTakeByIndex(self, idx: int) -> bool:
+	def FinalizeTake(self) -> bool:
+	def CopyGrades(self, tgtTimelineItems: list[TimelineItem]) -> bool:
+	def GetClipEnabled(self) -> bool:
+	def SetClipEnabled(self, enabled: bool) -> bool:
+	def GetCurrentVersion(self) -> VersionInfo:
+	def UpdateSidecar(self) -> bool:
+	def GetUniqueId(self) -> str:
+	def LoadBurnInPreset(self, presetName: str) -> bool:
+	def CreateMagicMask(self, mode: str) -> bool:
+	def RegenerateMagicMask(self) -> bool:
+	def Stabilize(self) -> bool:
+	def SmartReframe(self) -> bool:
+	def GetNodeGraph(self, layerIdx: int | None = None) -> Graph:
+	def GetColorGroup(self) -> ColorGroup | None:
+	def AssignToColorGroup(self, colorGroup: ColorGroup) -> bool:
+	def RemoveFromColorGroup(self) -> bool:
+	def ExportLUT(self, exportType: ExportLutType, path: str) -> bool:
+	def GetLinkedItems(self) -> list[TimelineItem]:
+	def GetTrackTypeAndIndex(self) -> list[str | int]:
+	def GetSourceAudioChannelMapping(self) -> str:
+	def SetSourceAudioChannelMapping(self, audioMapping: str) -> bool:
+	def GetIsColorOutputCacheEnabled(self) -> bool:
+	def GetIsFusionOutputCacheEnabled(self) -> str:
+	def SetColorOutputCache(self, enabled: bool) -> bool:
+	def SetFusionOutputCache(self, cacheValue: str) -> bool:
+	def GetVoiceIsolationState(self) -> VoiceIsolationState:
+	def SetVoiceIsolationState(self, state: VoiceIsolationState) -> bool:
+	def ResetAllNodeColors(self) -> bool:
+	def SetOutputBlanking(self, outputBlanking: OutputBlanking) -> bool:
+	def GetOutputBlanking(self) -> OutputBlanking:
+	def SetUseTimelineForOutputBlanking(self, useTimelineOutputBlanking: bool) -> bool:
+	def GetUseTimelineForOutputBlanking(self) -> bool:
+	def PerformMulticamSmartSwitch(self, smartSwitchSettings: SmartSwitchSettings) -> bool:
+	def FlattenMulticam(self, gradeOption: FlattenMulticamGrade) -> bool:
+	def GetFades(self) -> FadeInfo:
+	def SetFades(self, fades: FadeInfo) -> bool:

@@ -1,0 +1,12 @@
+﻿class MediaStorage:
+	def GetMountedVolumeList(self) -> list[str]:
+	def GetSubFolderList(self, folderPath: str) -> list[str]:
+	def GetFileList(self, folderPath: str) -> list[str]:
+	def RevealInStorage(self, path: str) -> bool:
+	def AddItemListToMediaPool(self, itemInfos: list[MediaStorageItemInfo]) -> list[MediaPoolItem]:
+	def AddClipMattesToMediaPool(self, mediaPoolItem: MediaPoolItem, paths: list[str], stereoEye: str | None = None) -> bool:
+	def AddTimelineMattesToMediaPool(self, paths: list[str]) -> list[MediaPoolItem]:
+	def StartCloneMedia(self, sourceDir: str, targetDirs: str | list[str]) -> bool:
+	def SetCloneToolSettings(self, cloneToolSettings: CloneToolSettings | None = None) -> bool:
+	def StopCloneMedia(self) -> bool:
+	def GetCloneStatus(self) -> CloneStatus:
