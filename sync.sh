@@ -4,7 +4,7 @@
 set -euo pipefail
 
 DIRECTION="${1:-auto}"
-REPO_PATH="${HOME}/motto-skills"
+REPO_PATH="${MOTTO_SKILLS_HOME:-${HOME}/motto-skill-registry}"
 KNOWLEDGE_REPO="${REPO_PATH}/knowledge"
 KNOWLEDGE_LOCAL="${HOME}/.factory/knowledge"
 

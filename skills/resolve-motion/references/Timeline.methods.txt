@@ -1,0 +1,65 @@
+﻿class Timeline:
+	def GetName(self) -> str:
+	def SetName(self, timelineName: str) -> bool:
+	def GetStartFrame(self) -> int:
+	def GetEndFrame(self) -> int:
+	def GetTrackCount(self, trackType: TrackType) -> int:
+	def GetItemListInTrack(self, trackType: TrackType, index: int) -> list[TimelineItem]:
+	def GetSelectedClips(self) -> list[TimelineItem]:
+	def GetCurrentTimecode(self) -> str:
+	def SetCurrentTimecode(self, timecode: str) -> bool:
+	def GetCurrentVideoItem(self) -> TimelineItem | None:
+	def AddMarker(self, frameId: int, color: MarkerColor, name: str, note: str, duration: int, customData: str | None = None) -> bool:
+	def DeleteMarkersByColor(self, color: MarkerColor | Literal['All']) -> bool:
+	def DeleteMarkerAtFrame(self, frameNum: int) -> bool:
+	def DeleteMarkerByCustomData(self, customData: str) -> bool:
+	def GetMarkers(self) -> dict[int, MarkerInfo]:
+	def GetMarkerByCustomData(self, customData: str) -> MarkerInfo:
+	def UpdateMarkerCustomData(self, frameId: int, customData: str) -> bool:
+	def GetMarkerCustomData(self, frameId: int) -> str:
+	def GetCurrentClipThumbnailImage(self) -> ThumbnailData:
+	def AddTrack(self, trackType: TrackType, subTrackType: str | None = None) -> bool:
+	def DeleteTrack(self, trackType: TrackType, trackIndex: int) -> bool:
+	def GetTrackSubType(self, trackType: TrackType, trackIndex: int) -> str:
+	def SetTrackEnable(self, trackType: TrackType, trackIndex: int, enabled: bool) -> bool:
+	def GetIsTrackEnabled(self, trackType: TrackType, trackIndex: int) -> bool:
+	def SetTrackLock(self, trackType: TrackType, trackIndex: int, locked: bool) -> bool:
+	def GetIsTrackLocked(self, trackType: TrackType, trackIndex: int) -> bool:
+	def DeleteClips(self, timelineItems: list[TimelineItem], rippleDelete = False) -> bool:
+	def SetClipsLinked(self, timelineItems: list[TimelineItem], linked: bool) -> bool:
+	def NormalizeAudioLevel(self, timelineItems: list[TimelineItem], normalizeAudioOptions: NormalizeAudioOptions | None = None) -> bool:
+	def AutoAlignClips(self, timelineItems: list[TimelineItem], autoAlignOptions: AutoAlignOptions | None = None) -> bool:
+	def GetNormalizeAudioModes(self) -> list[str]:
+	def GetTrackName(self, trackType: TrackType, trackIndex: int) -> str:
+	def SetTrackName(self, trackType: TrackType, trackIndex: int, name: str) -> bool:
+	def DuplicateTimeline(self, timelineName: str) -> Timeline:
+	def GrabStill(self) -> GalleryStill:
+	def GrabAllStills(self, stillFrameSource: int) -> list[GalleryStill]:
+	def CreateCompoundClip(self, timelineItems: list[TimelineItem], clipInfo: CompoundClipOptions | None = None) -> TimelineItem:
+	def CreateFusionClip(self, timelineItems: list[TimelineItem]) -> TimelineItem:
+	def Export(self, fileName: str, exportType: TimelineExportType, exportSubtype: TimelineExportSubtype) -> bool:
+	def GetSettings(self) -> TimelineSettings | ProjectSettings:
+	def SetSettings(self, settings: TimelineSettings) -> bool:
+	def GetStartTimecode(self) -> str:
+	def SetStartTimecode(self, timecode: str) -> bool:
+	def ImportIntoTimeline(self, filePath: str, importOptions: AAFImportOptions | None = None) -> bool:
+	def InsertGeneratorIntoTimeline(self, generatorName: str) -> TimelineItem:
+	def InsertFusionGeneratorIntoTimeline(self, generatorName: str) -> TimelineItem:
+	def InsertFusionCompositionIntoTimeline(self) -> TimelineItem:
+	def InsertOFXGeneratorIntoTimeline(self, generatorName: str) -> TimelineItem:
+	def InsertTitleIntoTimeline(self, titleName: str) -> TimelineItem:
+	def InsertFusionTitleIntoTimeline(self, titleName: str) -> TimelineItem:
+	def CreateSubtitlesFromAudio(self, autoCaptionSettings: AutoCaptionSettings | None = None) -> bool:
+	def GetUniqueId(self) -> str:
+	def DetectSceneCuts(self) -> bool:
+	def ConvertTimelineToStereo(self) -> bool:
+	def GetNodeGraph(self) -> Graph:
+	def AnalyzeDolbyVision(self, timelineItems: list[TimelineItem], analysisType: DolbyVisionAnalysisType) -> bool:
+	def GetMediaPoolItem(self) -> MediaPoolItem | None:
+	def GetMarkInOut(self) -> MarkInOut:
+	def SetMarkInOut(self, markIn: int, markOut: int, markType: MarkType | None = None) -> bool:
+	def ClearMarkInOut(self, markType: MarkType | None = None) -> bool:
+	def GetVoiceIsolationState(self, trackIndex: int) -> VoiceIsolationState:
+	def SetVoiceIsolationState(self, trackIndex: int, voiceIsolationState: VoiceIsolationState) -> bool:
+	def SetOutputBlanking(self, outputBlanking: OutputBlanking) -> bool:
+	def GetOutputBlanking(self) -> OutputBlanking:

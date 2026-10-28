@@ -24,8 +24,10 @@ for skill_dir in "$SOURCE_SKILLS_DIR"/*; do
 
   skill_md="$dest_dir/SKILL.md"
   if [ -f "$skill_md" ]; then
-    sed -i "s|C:\\\\Users\\\\lkmot\\\\tools\\\\|$TARGET_TOOLS_PATH|g" "$skill_md"
-    sed -i 's|\$MOTTO_SKILLS_HOME/tools/|'"$TARGET_TOOLS_PATH"'|g' "$skill_md"
+    # sed -i.bak form is portable across GNU sed (Linux) and BSD sed (macOS)
+    sed -i.bak "s|C:\\\\Users\\\\lkmot\\\\tools\\\\|$TARGET_TOOLS_PATH|g" "$skill_md"
+    sed -i.bak 's|\$MOTTO_SKILLS_HOME/tools/|'"$TARGET_TOOLS_PATH"'|g' "$skill_md"
+    rm -f "$skill_md.bak"
   fi
   echo "  + $skill_name"
 done
@@ -58,6 +60,14 @@ if [ -f "$MOTTO_SKILLS_HOME/policy/skill-broker.policy.json" ]; then
   else
     echo "  ~ skill-broker.policy.json (already exists, skipped — merge manually if needed)"
   fi
+fi
+
+# --- Memory System ---
+echo "Installing memory system..."
+if [ -f "$MOTTO_SKILLS_HOME/memory-system/install.sh" ]; then
+  bash "$MOTTO_SKILLS_HOME/memory-system/install.sh"
+else
+  echo "  ~ memory-system/ not found, skipped"
 fi
 
 echo ""

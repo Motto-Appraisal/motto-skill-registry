@@ -1,0 +1,47 @@
+﻿class Resolve:
+	def GetProjectManager(self) -> ProjectManager:
+	def GetMediaStorage(self) -> MediaStorage:
+	def Fusion(self) -> Fusion:
+	def GetCurrentProject(self) -> Project:
+	def GetCurrentTimeline(self) -> Timeline:
+	def GetMediaPool(self) -> MediaPool:
+	def GetGallery(self) -> Gallery:
+	def OpenPage(self, pageName: str) -> bool:
+	def GetCurrentPage(self) -> str:
+	def SetHighPriority(self, highPriority: bool) -> bool:
+	def GetVersion(self) -> list[int | str]:
+	def GetVersionString(self) -> str:
+	def GetProductName(self) -> str:
+	def IsStudio(self) -> bool:
+	def GetLayoutPresetList(self) -> list[str]:
+	def LoadLayoutPreset(self, presetName: str) -> bool:
+	def UpdateLayoutPreset(self, presetName: str) -> bool:
+	def ExportLayoutPreset(self, presetName: str, presetFilePath: str) -> bool:
+	def DeleteLayoutPreset(self, presetName: str) -> bool:
+	def SaveLayoutPreset(self, presetName: str) -> bool:
+	def ImportLayoutPreset(self, presetFilePath: str, presetName: str | None = None) -> bool:
+	def Quit(self) -> bool:
+	def ImportRenderPreset(self, presetPath: str) -> bool:
+	def ExportRenderPreset(self, presetName: str, exportPath: str) -> bool:
+	def GetBurnInPresetList(self) -> list[str]:
+	def DeleteBurnInPreset(self, presetName: str) -> bool:
+	def ImportBurnInPreset(self, presetPath: str) -> bool:
+	def ExportBurnInPreset(self, presetName: str, exportPath: str) -> bool:
+	def GetKeyboardPresetList(self) -> list[str]:
+	def LoadKeyboardPreset(self, presetName: str) -> bool:
+	def DeleteKeyboardPreset(self, presetName: str) -> bool:
+	def GetCurrentKeyboardPreset(self) -> str:
+	def ImportKeyboardPreset(self, filePath: str, presetName: str | None = None) -> bool:
+	def ExportKeyboardPreset(self, presetName: str, exportPath: str) -> bool:
+	def GetKeyframeMode(self) -> int:
+	def SetKeyframeMode(self, keyframeMode: KeyframeMode) -> bool:
+	def GetFairlightPresets(self) -> list[str]:
+	def DisableBackgroundTasksForCurrentResolveSession(self):
+	def ValidateDCTL(self, dctlSource: str) -> str | None:
+	def EncryptDCTL(self, inputPath: str, encryptDCTLOptions: EncryptDCTLOptions | None = None) -> bool:
+	def GetUserPreferencesPresetList(self) -> list[str]:
+	def LoadUserPreferencesPreset(self, presetName: str) -> bool:
+	def SaveUserPreferencesPreset(self, presetName: str) -> bool:
+	def DeleteUserPreferencesPreset(self, presetName: str) -> bool:
+	def ImportUserPreferencesPreset(self, filePath: str, presetName: str | None = None) -> bool:
+	def ExportUserPreferencesPreset(self, presetName: str, exportPath: str) -> bool:

@@ -1,0 +1,45 @@
+﻿class MediaPoolItem:
+	def GetName(self) -> str:
+	def SetName(self, name: str) -> bool:
+	def GetTimeline(self) -> Timeline:
+	def GetMetadata(self, metadataType: str | None = None) -> str | dict:
+	def SetMetadata(self, metadata: dict) -> bool:
+	def GetThirdPartyMetadata(self, metadataType: str | None = None) -> str | dict:
+	def SetThirdPartyMetadata(self, metadata: dict) -> bool:
+	def GetMediaId(self) -> str:
+	def AddMarker(self, frameId: int, color: MarkerColor, name: str, note: str, duration: int, customData: str | None = None) -> bool:
+	def DeleteMarkersByColor(self, color: MarkerColor | Literal['All']) -> bool:
+	def DeleteMarkerAtFrame(self, frameNum: int) -> bool:
+	def DeleteMarkerByCustomData(self, customData: str) -> bool:
+	def GetMarkers(self) -> dict[int, MarkerInfo]:
+	def GetMarkerByCustomData(self, customData: str) -> MarkerInfo:
+	def UpdateMarkerCustomData(self, frameId: int, customData: str) -> bool:
+	def GetMarkerCustomData(self, frameId: int) -> str:
+	def AddFlag(self, color: FlagColor) -> bool:
+	def GetFlagList(self) -> list[str]:
+	def ClearFlags(self, color: FlagColor | Literal['All']) -> bool:
+	def GetClipColor(self) -> ClipColor | Literal['']:
+	def SetClipColor(self, colorName: ClipColor) -> bool:
+	def ClearClipColor(self) -> bool:
+	def LinkFullResolutionMedia(self, fullResMediaPath: str) -> bool:
+	def LinkProxyMedia(self, proxyMediaFilePath: str) -> bool:
+	def UnlinkProxyMedia(self) -> bool:
+	def ReplaceClip(self, filePath: str) -> bool:
+	def ReplaceClipPreserveSubClip(self, filePath: str) -> bool:
+	def GetClipProperty(self, propertyName: str | None = None) -> str | ClipProperties:
+	def SetClipProperty(self, propertyName: str, propertyValue: str) -> bool:
+	def GetUniqueId(self) -> str:
+	def TranscribeAudio(self, useSpeakerDetection: bool | None = None, transcribeAsNestedClip = False) -> bool:
+	def ClearTranscription(self, clearNestedClipTranscription = False) -> bool:
+	def PerformAudioClassification(self) -> bool:
+	def ClearAudioClassification(self) -> bool:
+	def GetAudioMapping(self) -> str:
+	def SetAudioMapping(self, audioMapping: str) -> bool:
+	def GetMarkInOut(self) -> MarkInOut:
+	def SetMarkInOut(self, markIn: int, markOut: int, markType: MarkType | None = None) -> bool:
+	def ClearMarkInOut(self, markType: MarkType | None = None) -> bool:
+	def MonitorGrowingFile(self) -> bool:
+	def RemoveMotionBlur(self, deblurOption: DeblurOptions) -> MediaPoolItem:
+	def AnalyzeForIntellisearch(self, identifyFaces: bool, isBetterMode: bool) -> bool:
+	def AnalyzeForSlate(self, markerColor: SlateMarkerColor) -> bool:
+	def GetTranscription(self, useNestedClipTranscription = False) -> Transcription:
